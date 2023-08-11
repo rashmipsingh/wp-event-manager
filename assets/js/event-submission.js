@@ -140,6 +140,25 @@ EventSubmission = function () {
                 }
             }
 
+            if (jQuery('input[data-picker="datepicker"]#event_registration_date').length > 0) {
+                if (wp_event_manager_event_submission.show_past_date) {
+                    jQuery('input[data-picker="datepicker"]#event_registration_date').datepicker({
+                        dateFormat: wp_event_manager_event_submission.i18n_datepicker_format,
+                        firstDay: wp_event_manager_event_submission.start_of_week,
+                        monthNames: wp_event_manager_event_submission.monthNames,
+                    });
+                }
+                else {
+                    jQuery('input[data-picker="datepicker"]#event_registration_date').datepicker({
+                        dateFormat: wp_event_manager_event_submission.i18n_datepicker_format,
+                        firstDay: wp_event_manager_event_submission.start_of_week,
+                        monthNames: wp_event_manager_event_submission.monthNames,
+                    });
+                }
+            } else{
+                jQuery("#event_registration_date").val("");
+            }
+
             if (jQuery('input[data-picker="datepicker"]').length > 0) {
                 if (wp_event_manager_event_submission.show_past_date) {
                     jQuery('input[data-picker="datepicker"]').datepicker({

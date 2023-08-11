@@ -324,6 +324,14 @@ class WP_Event_Manager_Form_Submit_Event extends WP_Event_Manager_Form {
 					'priority'    => 17
 				),
 
+				'event_registration_date' => array(
+					'label'       => __( 'Date', 'wp-event-manager' ),	
+					'type'        => 'date',
+					'required'    => false,
+					'placeholder' => __( 'Please enter date', 'wp-event-manager' ),
+					'priority'    => 19
+				),
+
 				'event_timezone' => array(
 					'label'=> __( 'Event timezone', 'wp-event-manager' ),
 					'placeholder'  	=> __( 'Please select timezone for event', 'wp-event-manager' ),
